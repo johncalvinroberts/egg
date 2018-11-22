@@ -6,21 +6,26 @@
   "directories": {
     "doc": "docs"
   },
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "responsive",
+    "framework",
+    "universal"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && npm run build-scss && npm run build-autoprefix && npm run build-cleancss",
+    "clean": "rimraf dist",
+    "build-scss": "node-sass --output-style expanded --source-map true egg.scss dist/egg.css",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output dist/egg.css dist/egg.css",
+    "build-cleancss": "cleancss -o dist/egg.min.css dist/egg.css",
+    "start": "npm run build-scss -- --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johncalvinroberts/egg.git"
   },
-  "keywords": [
-    "[\"css\"",
-    "\"sass\"",
-    "\"scss\"",
-    "\"responsive\"",
-    "\"framework\"",
-    "\"universal\"]"
-  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -29,8 +34,18 @@
   "homepage": "https://github.com/johncalvinroberts/egg#readme",
   "devDependencies": {
     "autoprefixer": "^9.3.1",
+    "clean-css-cli": "^4.2.1",
     "node-sass": "^4.10.0",
     "postcss-cli": "^6.0.1",
     "rimraf": "^2.6.2"
+  },
+  "files": [
+    "css",
+    "scss",
+    "LICENSE",
+    "egg.scss"
+  ],
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
