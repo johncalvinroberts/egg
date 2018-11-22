@@ -1,47 +1,68 @@
 @if index($partials, form) {
   .field {
-    margin-bottom: $space/2;
+    margin-bottom: 1.5*$space/2;
     .description {
       color: $grey;
       display: block;
-      @include font-size($small);
+      margin-top: $space/4;
     }
+    &.full-width {
+      input,
+      .select,
+      .select select,
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+
+  fieldset {
+    border: 1px solid $line;
+    border-radius: $radius;
+    margin: 0 0 $space/2;
+    padding: $space/2 $space/2 0;
+    position: relative;
   }
 
   label,
   .label {
     @include font-size($small);
+    font-weight: 500;
+    text-transform: uppercase;
     display: block;
-    font-weight: bold;
   }
 
   input,
   textarea,
   select {
+    box-shadow: none;
+    color: inherit;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
   }
 
-  input:not([type=button]):not([type=checkbox]):not([type=file]):not([type=hidden]):not([type=radio]):not([type=range]):not([type=reset]):not([type=submit]),
+  input,
   textarea,
   .select select {
     background: $background;
     border: 1px solid $line;
     border-radius: $radius;
-    box-shadow: $shadow inset;
     box-sizing: border-box;
-    display: block;
-    padding: $space/6 $space/4;
-    transition-property: background, border;
+    display: inline-block;
+    padding: $space/4 $space/2;
+    transition-property: border;
     transition-duration: $ease;
+    &.small {
+      padding: $space/8 $space/4;
+    }
     &:hover {
       border-color: shade($line, 20%);
     }
     &:active,
     &:focus {
-      background: #FFF;
       border-color: $blue;
+      box-shadow: 0 0 0 2px rgba($blue, 0.2);
       outline: none;
     }
     &[disabled],
@@ -51,12 +72,15 @@
     &[readonly=true],
     &[readonly=readonly],
     &[readonly] {
-      border-color: $light;
+      background: $light;
+      border-color: $line-2;
+      color: $grey;
       &:active,
       &:focus,
       &:hover {
-        background: $light;
-        border-color: $light;
+        border-color: $line-2;
+        box-shadow: none;
+        cursor: not-allowed;
       }
     }
   }
@@ -66,11 +90,10 @@
     display: inline-block;
     position: relative;
     & > select {
-      @include appearance(none);
-      @include button($light, true);
-      box-shadow: $shadow;
+      appearance: none;
+      -webkit-appearance: none;
       cursor: pointer;
-      padding: $space/6 1.5*$space $space/6 $space/2;
+      padding-right: 1.5*$space;
     }
     &:after {
       bottom: 0;
@@ -87,13 +110,9 @@
   }
 
   .actions {
-    border-top: 1px solid $light;
-    border-radius: 0 0 $radius $radius;
-    margin-top: $space/2;
-    padding-top: $space/2;
-    text-align: right;
+    margin-top: $space;
     > * {
-      margin-left: $space/2;
+      margin-right: $space/4;
     }
   }
 }

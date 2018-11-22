@@ -25,6 +25,8 @@
     cursor: pointer;
     color: $blue;
     text-decoration: none;
+    transition-property: color;
+    transition-duration: $ease;
     &:hover {
       color: shade($blue, 10%);
       text-decoration: underline;
@@ -39,29 +41,39 @@
   h6 {
     color: $black;
     font-family: $headline;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 120%;
     margin: 0 0 $space;
   }
 
   h1 {
-    @include font-size($gigantic);
+    @include font-size($headline-1);
   }
 
   h2 {
-    @include font-size($huge);
+    @include font-size($headline-2);
   }
 
   h3,
   h4,
   h5,
   h6 {
-    @include font-size($larger);
+    @include font-size($headline-3);
+  }
+
+  strong,
+  b {
+    font-weight: 500;
   }
 
   p,
   pre {
     margin: 0 0 $space;
+    &.smaller {
+      @include font-size($smaller);
+      line-height: 160%;
+      margin-bottom: $space/2;
+    }
   }
 
   ul,
@@ -83,6 +95,7 @@
 
   small {
     @include font-size($small);
+    line-height: 160%;
   }
 
   blockquote {
@@ -104,12 +117,10 @@
   code,
   .code {
     background: $light;
-    border: 1px solid $line;
     border-radius: $radius;
     display: inline-block;
     font-family: $code;
-    @include font-size($smaller);
-    line-height: 140%;
+    font-size: 85%;
     padding: 0 $space/4;
   }
 
@@ -125,35 +136,82 @@
   /* Tables */
 
   table {
-    border: 1px solid $line;
+    border: 0;
+    border-collapse: collapse;
     margin: 0 0 $space;
     text-align: left;
-    th,
-    td {
-      border-right: 1px solid $light;
-      padding: $space/4 $space/2;
-      &:last-child {
-        border-right: 0;
+    width: 100%;
+    thead,
+    tbody {
+      th,
+      td {
+        border: 0;
+        padding: $space/6 $space/4;
       }
     }
-    td {
-      padding: $space/2 $space/2;
-    }
     thead {
-      background: $light;
-      color: tint($black, 20%);
       @include font-size($small);
+      font-weight: bold;
       th {
-        font-weight: normal;
         white-space: nowrap;
       }
     }
     tbody {
       tr {
-        border-top: 1px solid $line;
-        transition-property: border;
-        transition-duration: $ease;
+        td,
+        th {
+          border-top: 1px solid $line-3;
+          padding: $space/4;
+        }
       }
+    }
+  }
+
+  /* Icons */
+
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    svg {
+      display: block;
+      fill: $grey;
+      height: $space;
+      transition-property: fill;
+      transition-duration: $ease;
+      vertical-align: middle;
+      width: $space;
+    }
+    &.smaller {
+      svg {
+        height: 1.5*$space/2;
+        width: 1.5*$space/2;
+      }
+    }
+    &.small {
+      svg {
+        height: $space/2;
+        width: $space/2;
+      }
+    }
+    &.larger {
+      svg {
+        height: 1.5*$space;
+        width: 1.5*$space;
+      }
+    }
+    &.large {
+      svg {
+        height: 2*$space;
+        width: 2*$space;
+      }
+    }
+  }
+}
+
+a.icon {
+  &:hover {
+    svg {
+      fill: $black;
     }
   }
 }

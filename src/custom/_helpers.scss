@@ -1,0 +1,149 @@
+.thin {
+  font-weight: 200;
+}
+
+.regular {
+  @include font-size($regular);
+  line-height: 160%;
+}
+
+.hidden {
+  display: none;
+}
+
+.full-width {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.centered {
+  text-align: center;
+}
+
+.mobile-only {
+  @include breakpoint(mobile) {
+    display: block;
+  }
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+// Padding
+
+.padding-bottom {
+  padding-bottom: $space;
+}
+.margin-left {
+  padding-left: $space;
+}
+.padding-right {
+  padding-right: $space;
+}
+.padding-top {
+  padding-top: $space;
+}
+
+.big-padding-bottom {
+  @include breakpoint(mobile) { padding-bottom: $space; }
+  @include breakpoint(tablet) { padding-bottom: 2*$space; }
+}
+.big-padding-left {
+  @include breakpoint(mobile) { padding-left: $space; }
+  @include breakpoint(tablet) { padding-left: 2*$space; }
+}
+.big-padding-right {
+  @include breakpoint(mobile) { padding-right: $space; }
+  @include breakpoint(tablet) { padding-right: 2*$space; }
+}
+.big-padding-top {
+  @include breakpoint(mobile) { padding-top: $space; }
+  @include breakpoint(tablet) { padding-top: 2*$space; }
+}
+
+.huge-padding-bottom {
+  @include breakpoint(mobile) { padding-bottom: 2*$space; }
+  @include breakpoint(tablet) { padding-bottom: 4*$space; }
+}
+.huge-padding-left {
+  @include breakpoint(mobile) { padding-left: 2*$space; }
+  @include breakpoint(tablet) { padding-left: 4*$space; }
+}
+.huge-padding-right {
+  @include breakpoint(mobile) { padding-right: 2*$space; }
+  @include breakpoint(tablet) { padding-right: 4*$space; }
+}
+.huge-padding-top {
+  @include breakpoint(mobile) { padding-top: 2*$space; }
+  @include breakpoint(tablet) { padding-top: 4*$space; }
+}
+
+// Margin
+
+.margin-bottom {
+  margin-bottom: $space;
+}
+.margin-left {
+  margin-left: $space;
+}
+.margin-right {
+  margin-right: $space;
+}
+.margin-top {
+  margin-top: $space;
+}
+
+.big-margin-bottom {
+  @include breakpoint(mobile) { margin-bottom: $space; }
+  @include breakpoint(tablet) { margin-bottom: 2*$space; }
+}
+.big-margin-left {
+  @include breakpoint(mobile) { margin-left: $space; }
+  @include breakpoint(tablet) { margin-left: 2*$space; }
+}
+.big-margin-right {
+  @include breakpoint(mobile) { margin-right: $space; }
+  @include breakpoint(tablet) { margin-right: 2*$space; }
+}
+.big-margin-top {
+  @include breakpoint(mobile) { margin-top: $space; }
+  @include breakpoint(tablet) { margin-top: 2*$space; }
+}
+
+.huge-margin-bottom {
+  @include breakpoint(mobile) { margin-bottom: 2*$space; }
+  @include breakpoint(tablet) { margin-bottom: 4*$space; }
+}
+.huge-margin-left {
+  @include breakpoint(mobile) { margin-left: 2*$space; }
+  @include breakpoint(tablet) { margin-left: 4*$space; }
+}
+.huge-margin-right {
+  @include breakpoint(mobile) { margin-right: 2*$space; }
+  @include breakpoint(tablet) { margin-right: 4*$space; }
+}
+.huge-margin-top {
+  @include breakpoint(mobile) { margin-top: 2*$space; }
+  @include breakpoint(tablet) { margin-top: 4*$space; }
+}
+
+// Border
+
+.border-bottom {
+  border-bottom: 1px solid $line;
+}
+.border-left {
+  border-left: 1px solid $line;
+}
+.border-right {
+  border-right: 1px solid $line;
+}
+.border-top {
+  border-top: 1px solid $line;
+}

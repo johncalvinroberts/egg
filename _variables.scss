@@ -1,60 +1,58 @@
-/* Colors from http://clrs.cc/ */
-
-$aqua: #7FDBFF !default;
-$black: #111111 !default;
-$blue: #0074D9 !default;
-$fuchsia: #F012BE !default;
-$green: #2ECC40 !default;
-$grey: #AAAAAA !default;
-$lime: #01FF70 !default;
-$maroon: #85144b !default;
-$navy: #001f3f !default;
-$olive: #3D9970 !default;
-$orange: #FF851B !default;
-$purple: #B10DC9 !default;
-$red: #FF4136 !default;
-$silver: #DDDDDD !default;
-$teal: #39CCCC !default;
-$yellow: #FFDC00 !default;
-
-$primary: $blue !default;
-$secondary: $purple !default;
-
-$light: #EEE !default;
-$line: $silver !default;
-$background: #FFF !default;
-
 /* Sizes */
 
-$pico: 10 !default;
-$micro: 11 !default;
-$small: 12 !default;
-$smaller: 14 !default;
-$regular: 16 !default;
-$larger: 18 !default;
-$large: 24 !default;
-$huge: 32 !default;
-$gigantic: 48 !default;
-$humongous: 64 !default;
+$width: 1040px;
+$wrapper: 1040px;
+$wrapper_smaller: 960px;
+$wrapper_small: 720px;
+
+$small: 14;
+$smaller: 16;
+$regular: 18;
+$larger: 22;
+$large: 26;
+
+$headline-1: 52;
+$headline-2: 36;
+$headline-3: 24;
+$headline-1-mobile: 44;
+$headline-2-mobile: 28;
+$headline-3-mobile: 20;
+
+$radius: 2px;
+
+/* Colors */
+
+$black: #000;
+$black-1: #202124;
+$black-2: #222;
+$grey: lighten($black, 60%);
+$light: lighten($black, 98%);
+$line: lighten($black, 90%);
+$red: #FF4847;
+$primary: $red;
+
+$facebook: #3B5998;
+$google: #d64937;
+$linkedin: #0073b2;
+$twitter: #55acee;
+$weibo: #E6132D;
+$hn: #FF4F01;
 
 /* Fonts */
 
-$body: -apple-system, 'Avenir next', Avenir, Roboto, Noto, 'Helvetica neue', Helvetica, Arial, Sans-serif !default;
-$headline: $body !default;
-$code: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace !default;
+$headline: "NEXTBook", -apple-system, "Avenir next", Avenir, Roboto, Noto, "Helvetica neue", Helvetica, Arial, Sans-serif;
+$body: $headline;
+$code: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
 
 /* Misc */
 
-$ease: 0.2s !default;
-$space: 24px !default;
-$radius: 2px !default;
-$shadow: rgba(0, 0, 0, 0.1) 0 1px 1px 0 !default;
-$hover: rgba(0, 0, 0, 0.2) 0 1px 10px 0 !default;
+$container: 1440px;
+$container-large: 1264px;
 
 /* Responsive */
 
 $breakpoints: (
-  tablet: 640px,
+  tablet: 960px,
   desktop: 1024px,
   highres: 1280px
 );
@@ -63,10 +61,5 @@ $breakpoints: (
 
 $partials: (
   base,
-  button,
-  form,
-  menu,
-  modal,
-  notification,
-  tooltip
-) !default;
+  layout
+);

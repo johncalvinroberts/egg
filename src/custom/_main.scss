@@ -1,0 +1,576 @@
+/**
+ * General
+ */
+body {
+  font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3 {
+  color: inherit;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+h1,
+.h1 {
+  @include breakpoint(mobile) { @include font-size($headline-1-mobile); }
+  @include breakpoint(tablet) { @include font-size($headline-1); }
+}
+
+h2,
+.h2 {
+  @include breakpoint(mobile) { @include font-size($headline-2-mobile); }
+  @include breakpoint(tablet) { @include font-size($headline-2); }
+}
+
+h3,
+h4,
+h5,
+h6,
+.h3 {
+  @include breakpoint(mobile) { @include font-size($headline-3-mobile); }
+  @include breakpoint(tablet) { @include font-size($headline-3); }
+}
+
+figure {
+  margin: 0 0 $space;
+  text-align: center;
+  figcaption {
+    color: $grey;
+    @include font-size($small);
+    margin-top: $space/2;
+  }
+}
+
+a,
+.link {
+  color: $red;
+  outline: none;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.link {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  transition-duration: $ease;
+  transition-property: color;
+}
+
+strong {
+  font-weight: 400;
+}
+
+hr {
+  border: 1px solid $line;
+  border-width: 1px 0 0;
+  margin: $space 0;
+}
+
+.button {
+  background: none;
+  border: 1px solid $red;
+  color: $red;
+  display: inline-block;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: $space/4 1.5*$space/2 $space/6;
+  transition-duration: $ease;
+  transition-property: background, border, color;
+  &:hover {
+    background-color: $red;
+    color: #FFF;
+    cursor: pointer;
+  }
+  &.active,
+  &:active {
+    background: $black;
+    border-color: $black;
+  }
+  &.large {
+    @include font-size($large);
+    line-height: 160%;
+    padding: $space/3 1.5*3*$space/4 $space/4;
+  }
+  &.small {
+    @include font-size($smaller);
+    line-height: 160%;
+    padding: $space/6 $space/2 $space/8;
+  }
+}
+
+.icon {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-weight: inherit;
+  line-height: inherit;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  transition-duration: $ease;
+  transition-property: color;
+  svg {
+    fill: $black;
+    transition-duration: $ease;
+    transition-property: fill;
+  }
+  span + svg {
+    float: right;
+    margin-left: $space/4;
+  }
+}
+
+.container {
+  @include breakpoint(mobile) {
+    padding: 0 $space;
+  }
+  @include breakpoint(tablet) {
+    padding: 0 1.5*$space;
+  }
+}
+
+.row {
+  @include clearfix;
+  @include breakpoint(mobile) {
+    @include clearfix;
+    & > .left + .right,
+    & > .right + .left {
+      margin-top: $space;
+    }
+  }
+  @include breakpoint(tablet) {
+    & > .left,
+    & > .right {
+      box-sizing: border-box;
+    }
+    & > .left {
+      float: left;
+      padding-right: $space;
+      width: 35%;
+      &.narrow {
+        max-width: 16*$space;
+      }
+    }
+    & > .right {
+      float: right;
+      left: $space;
+      padding-left: $space;
+      width: 65%;
+    }
+  }
+}
+
+.row > .sticky {
+  @include breakpoint(tablet) {
+    position: sticky;
+    top: 3*$space/2;
+  }
+}
+
+
+.grid,
+.grid-3 {
+  @include breakpoint(mobile) {
+    @include grid(1);
+  }
+  @include breakpoint(only_tablet) {
+    @include grid(2);
+  }
+  @include breakpoint(desktop) {
+    @include grid;
+  }
+}
+
+.grid-4 {
+  @include breakpoint(mobile) {
+    @include grid(2);
+  }
+  @include breakpoint(only_tablet) {
+    @include grid(3);
+  }
+  @include breakpoint(desktop) {
+    @include grid(4);
+  }
+}
+
+.grid-2 {
+  @include breakpoint(mobile) {
+    @include grid(1);
+  }
+  @include breakpoint(tablet) {
+    @include grid(2);
+  }
+}
+
+.grid,
+.grid-2,
+.grid-3,
+.grid-4 {
+  &.padded {
+    margin: -$space/2;
+    > * {
+      padding: $space/2;
+    }
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+
+.card {
+  box-sizing: border-box;
+  @include clearfix;
+  .avatar,
+  img,
+  svg {
+    background-color: $light;
+    float: left;
+    height: 3*$space;
+    width: 3*$space;
+  }
+  .content {
+    margin-left: 3*$space + $space/2;
+    margin-top: $space/2;
+  }
+}
+
+.box {
+  background: $light;
+  padding: 3*$space $space;
+  text-align: center;
+}
+
+.cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  &.two-by-one {
+    height: 0;
+    @include breakpoint(mobile) { padding-bottom: 80%; }
+    @include breakpoint(tablet) { padding-bottom: 50%; }
+  }
+}
+
+.thumbnail {
+  background-color: $light;
+  height: 3*$space;
+  width: 3*$space;
+}
+
+.container > .cover {
+  @include breakpoint(mobile) {
+    margin-left: -$space;
+    margin-right: -$space;
+  }
+}
+
+.list {
+  border-bottom: 1px solid $line;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &.with-thumbnails {
+    .content {
+      padding-left: 3*$space + 1.5*$space/2;
+      padding-top: $space/4;
+    }
+  }
+  li {
+    border-top: 1px solid $line;
+    @include clearfix;
+    margin: 0;
+    padding: $space 0;
+    .thumbnail {
+      float: left;
+      margin-right: 1.5*$space/2;
+    }
+    h3 {
+      margin: 0;
+      transition-duration: $ease;
+      transition-property: color;
+    }
+    a {
+      color: inherit;
+      &:hover {
+        h3 {
+          color: $red;
+        }
+      }
+    }
+  }
+  &.collapsible {
+    & + .toggle {
+      display: none;
+    }
+    &.collapsed {
+      li.collapsed {
+        display: none;
+      }
+      & + .toggle {
+        display: block;
+      }
+    }
+  }
+}
+
+.columns {
+  @include breakpoint(tablet) {
+    @include clearfix;
+    li {
+      float: left;
+      width: 50%;
+    }
+  }
+}
+
+.filters {
+  color: $grey;
+  a {
+    color: inherit;
+    &.active {
+      color: $black;
+      font-weight: 500;
+      &:hover {
+        color: $black;
+      }
+    }
+    &:hover {
+      color: $red;
+    }
+  }
+  @include breakpoint(mobile) {
+    margin-bottom: $space;
+    a {
+      display: inline-block;
+      margin-right: 1.5*$space/2;
+    }
+  }
+  @include breakpoint(tablet) {
+    a {
+      display: block;
+      @include font-size($larger);
+      line-height: 160%;
+    }
+  }
+}
+
+.meta {
+  color: $grey;
+}
+
+/**
+ * Header
+ */
+#header {
+  font-weight: 400;
+  @include breakpoint(mobile) {
+    padding: $space;
+  }
+  @include breakpoint(tablet) {
+    padding: 1.5*$space;
+  }
+  text-align: right;
+  .logo {
+    float: left;
+    svg {
+      fill: $red;
+      height: $space;
+      transition-duration: $ease;
+      transition-property: fill;
+    }
+    &:hover {
+      svg {
+        fill: $black;
+      }
+    }
+  }
+  .icon:active,
+  .icon:hover {
+    color: $red;
+    svg {
+      fill: $red;
+    }
+  }
+  .toggle {
+    float: right;
+  }
+  .menu {
+    a {
+      color: inherit;
+      &:hover,
+      &.active {
+        color: $red;
+        text-decoration: none;
+      }
+    }
+  }
+  @include breakpoint(mobile) {
+    .menu {
+      background: $red;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      position: fixed;
+      right: 0;
+      text-align: left;
+      top: 0;
+      transition-duration: $ease/2;
+      transition-property: opacity, visibility;
+      visibility: hidden;
+      z-index: 999;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        .body a {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      .header {
+        @include clearfix;
+        padding: $space;
+        .logo {
+          svg {
+            fill: #FFF;
+          }
+          &:hover {
+            svg {
+              fill: $black;
+            }
+          }
+        }
+        .icon {
+          color: $black;
+          svg {
+            fill: $black;
+          }
+          &:hover {
+            color: #FFF;
+            svg {
+              fill: #FFF;
+            }
+          }
+        }
+      }
+      .close {
+        float: right;
+      }
+      .body {
+        padding: 0 $space;
+        a {
+          color: #FFF;
+          display: block;
+          @include font-size($large);
+          margin-bottom: $space;
+          opacity: 0;
+          transition-duration: $ease;
+          transition-property: color, opacity, transform;
+          transform: translateX(-$space);
+          &:nth-child(1) { transition-delay: $ease/2; }
+          &:nth-child(2) { transition-delay: 1.5*$ease/2; }
+          &:nth-child(3) { transition-delay: 2*$ease/2; }
+          &:nth-child(4) { transition-delay: 2.5*$ease/2; }
+          &:nth-child(5) { transition-delay: 3*$ease/2; }
+          &:nth-child(6) { transition-delay: 3.5*$ease/2; }
+          &:nth-child(7) { transition-delay: 4*$ease/2; }
+          &:nth-child(8) { transition-delay: 4.5*$ease/2; }
+          &:nth-child(9) { transition-delay: 5*$ease/2; }
+          &:nth-child(10) { transition-delay: 5.5*$ease/2; }
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    .menu {
+      a {
+        margin-left: $space;
+      }
+    }
+  }
+}
+
+/**
+ * Content
+ */
+#content {
+  .row {
+    @include breakpoint(mobile) {
+      margin: 3*$space 0;
+    }
+    @include breakpoint(tablet) {
+      margin: 4*$space 0;
+    }
+  }
+  .header {
+    .back {
+      color: $grey;
+      &:hover {
+        color: $red;
+      }
+    }
+    h1 + p {
+      @include font-size($larger);
+      font-weight: 200;
+      line-height: 140%;
+    }
+    h1 { line-height: 125%; }
+  }
+}
+
+/**
+ * Footer
+ */
+#footer {
+  @include font-size($smaller);
+  line-height: 160%;
+  h4 {
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: 0;
+  }
+  a {
+    color: inherit;
+    &:hover {
+      color: $red;
+    }
+  }
+  .row {
+    padding-bottom: $space;
+    padding-top: 2*$space;
+  }
+  .left {
+    margin-bottom: $space;
+    svg {
+      fill: $black;
+      height: $space;
+      transition-duration: $ease;
+      transition-property: fill;
+    }
+  }
+  .legal {
+    display: inline-block;
+    @include font-size($small);
+  }
+}

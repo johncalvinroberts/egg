@@ -1,28 +1,21 @@
 @if index($partials, notification) {
   .notification {
-    border: 1px solid $line;
-    border-left: 3px solid $line;
     border-radius: $radius;
+    color: #FFF;
     display: block;
+    @include font-size($smaller);
+    margin-bottom: $space;
     padding: $space/4 $space/2;
     &.error {
-      border-color: $red;
+      background: lighten($red, 45%);
       color: $red;
     }
-    &.info {
-      border-color: $blue;
+    &.success {
+      background: lighten($blue, 50%);
       color: $blue;
     }
-    &.success {
-      border-color: $green;
-      color: $green;
-    }
-    &.undefined {
-      border-color: $purple;
-      color: $purple;
-    }
     &.warning {
-      border-color: $orange;
+      background: lighten($orange, 38%);
       color: $orange;
     }
     > *:last-child {
@@ -44,8 +37,8 @@
       opacity: 0.5;
       padding: 0;
       text-decoration: none;
-      @include transition-property(opacity);
-      @include transition-duration($ease);
+      transition-property: opacity;
+      transition-duration: $ease;
       &:hover {
         opacity: 1;
       }

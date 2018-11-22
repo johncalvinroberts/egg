@@ -1,6 +1,5 @@
 // Loading normalize & bourbon, you could load them from somewhere else
-@import '../bourbon/app/assets/stylesheets/_bourbon';
-@import '../normalize-scss/_normalize';
+@import './vendors/_normalize.scss';
 
 /*** VARIABLES (colors, layout, spacing & typography) ***/
 
@@ -8,5 +7,22 @@
 
 /*** MIXINS & PARTIALS ***/
 
-@import 'modules/_all';
+@import 'utils/_all';
 @import 'partials/_all';
+
+/*** CUSTOM ***/
+
+@import 'custom/_all';
+
+/*** FONTS ***/
+
+@include font-face('ETBook', './fonts/ETBook/et-book-roman-line-figures', 400);
+@include font-face('ETBook', './fonts/ETBook/et-book-bold-line-figures', 700);
+@include font-face('ETBook', './fonts/ETBook/et-book-display-italic-old-style-figures', 400, italic);
+
+@import 'fonts/NEXTBook-Italic';
+@import 'fonts/NEXTBook-Regular';
+@import 'fonts/NEXTBook-Thin';
+@import 'fonts/NEXTBook-ThinItalic';
+@import 'fonts/NEXTBook-Bold';
+@import 'fonts/NEXTBook-BoldItalic';

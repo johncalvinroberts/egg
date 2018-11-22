@@ -1,0 +1,114 @@
+body.with-overlay {
+  overflow: hidden;
+}
+
+.overlay {
+  background: #FFF;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+  @include breakpoint(mobile) {
+    padding: $space;
+  }
+  @include breakpoint(tablet) {
+    padding: 1.5*$space;
+  }
+  position: fixed;
+  right: 0;
+  text-align: left;
+  top: 0;
+  transform: scale(1.4);
+  transition-duration: $ease/2;
+  transition-property: opacity, transform, visibility;
+  visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  z-index: 999;
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+  .header {
+    @include clearfix;
+    margin-bottom: $space;
+  }
+  .close {
+    color: $grey;
+    float: right;
+    svg {
+      fill: $grey;
+      transition-duration: $ease;
+      transition-property: fill;
+    }
+    &:hover {
+      color: $black;
+      svg {
+        fill: $black;
+      }
+    }
+  }
+  .body {
+    margin: 0 auto;
+    max-width: $wrapper_small;
+  }
+  &.red {
+    background: linear-gradient(rgba($red, 1), rgba($red, 0.96), rgba($red, 0.86));
+    color: #FFF;
+    .close {
+      svg {
+        fill: rgba(#FFF, 0.6);
+      }
+      &:hover {
+        svg {
+          fill: rgba(#FFF, 1);
+        }
+      }
+    }
+    h2 {
+      color: inherit;
+    }
+    input[type=email],
+    input[type=password],
+    input[type=text],
+    input[type=number],
+    textarea,
+    .select select {
+      border-color: rgba(#FFF, 0.6);
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: rgba(#FFF, 1);
+      }
+    }
+    input[type=checkbox] {
+      &:checked {
+        & + span {
+          &:before {
+            background-color: transparent;
+            background-image: url(./icons/icon-checked.svg);
+          }
+        }
+      }
+      & + span {
+        &:before {
+          background-image: none;
+          border-color: rgba(#FFF, 0.6);
+        }
+        &:hover {
+          &:before {
+            border-color: rgba(#FFF, 1);
+          }
+        }
+      }
+    }
+    .button {
+      border-color: #FFF;
+      color: #FFF;
+      &:hover {
+        background: #FFF;
+        color: $red;
+      }
+    }
+  }
+}
