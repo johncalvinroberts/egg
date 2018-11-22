@@ -1,0 +1,36 @@
+{
+  "name": "egg",
+  "version": "1.0.0",
+  "description": "A beautiful sass-based css framework",
+  "main": "egg.scss",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johncalvinroberts/egg.git"
+  },
+  "keywords": [
+    "[\"css\"",
+    "\"sass\"",
+    "\"scss\"",
+    "\"responsive\"",
+    "\"framework\"",
+    "\"universal\"]"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johncalvinroberts/egg/issues"
+  },
+  "homepage": "https://github.com/johncalvinroberts/egg#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "node-sass": "^4.10.0",
+    "postcss-cli": "^6.0.1",
+    "rimraf": "^2.6.2"
+  }
+}
