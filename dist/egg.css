@@ -53,7 +53,8 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -238,7 +239,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -272,7 +274,8 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -409,8 +412,10 @@ a {
   cursor: pointer;
   color: #0070E0;
   text-decoration: none;
+  -webkit-transition-property: color;
   transition-property: color;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 a:hover {
@@ -575,8 +580,10 @@ table tbody tr th {
   display: block;
   fill: #999999;
   height: 24px;
+  -webkit-transition-property: fill;
   transition-property: fill;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   vertical-align: middle;
   width: 24px;
 }
@@ -606,7 +613,8 @@ a.icon:hover svg {
 }
 
 .container {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0 auto;
   max-width: 1440px;
 }
@@ -627,7 +635,8 @@ a.icon:hover svg {
 .switch:active {
   border-color: #0070E0;
   border-radius: 36px;
-  box-shadow: 0 0 0 2px rgba(0, 112, 224, 0.2);
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 112, 224, 0.2);
+          box-shadow: 0 0 0 2px rgba(0, 112, 224, 0.2);
   outline: none;
 }
 
@@ -653,7 +662,8 @@ a.icon:hover svg {
   position: absolute;
   right: 0;
   top: 0;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .switch .slider span {
@@ -664,7 +674,8 @@ a.icon:hover svg {
   left: 2px;
   position: absolute;
   width: 18px;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .switch .slider span:after {
@@ -707,7 +718,8 @@ a.icon:hover svg {
   border: 2px solid #fafafa;
   border-radius: 50%;
   border-top-color: #0070E0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 24px;
   width: 24px;
   bottom: 0;
@@ -829,7 +841,9 @@ a:hover,
   font-weight: inherit;
   margin: 0;
   padding: 0;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: color;
   transition-property: color;
 }
 
@@ -851,7 +865,9 @@ hr {
   font-weight: inherit;
   line-height: inherit;
   padding: 6px 18px 4px;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: background, border, color;
   transition-property: background, border, color;
 }
 
@@ -889,13 +905,17 @@ hr {
   outline: none;
   margin: 0;
   padding: 0;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: color;
   transition-property: color;
 }
 
 .icon svg {
   fill: #000;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: fill;
   transition-property: fill;
 }
 
@@ -937,7 +957,8 @@ hr {
 @media (min-width: 961px) {
   .row > .left,
   .row > .right {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .row > .left {
     float: left;
@@ -978,7 +999,8 @@ hr {
   }
   .grid > *,
   .grid-3 > * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     clear: none;
     float: left;
     margin: 0;
@@ -1006,7 +1028,8 @@ hr {
   }
   .grid > *,
   .grid-3 > * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     clear: none;
     float: left;
     margin: 0;
@@ -1034,7 +1057,8 @@ hr {
   }
   .grid > *,
   .grid-3 > * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     clear: none;
     float: left;
     margin: 0;
@@ -1059,7 +1083,8 @@ hr {
     display: block;
   }
   .grid-4 > * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     clear: none;
     float: left;
     margin: 0;
@@ -1083,7 +1108,8 @@ hr {
     display: block;
   }
   .grid-4 > * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     clear: none;
     float: left;
     margin: 0;
@@ -1107,7 +1133,8 @@ hr {
     display: block;
   }
   .grid-4 > * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     clear: none;
     float: left;
     margin: 0;
@@ -1131,7 +1158,8 @@ hr {
     display: block;
   }
   .grid-2 > * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     clear: none;
     float: left;
     margin: 0;
@@ -1155,7 +1183,8 @@ hr {
     display: block;
   }
   .grid-2 > * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     clear: none;
     float: left;
     margin: 0;
@@ -1188,7 +1217,8 @@ hr {
 }
 
 .card {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .card::after {
@@ -1284,7 +1314,9 @@ hr {
 
 .list li h3 {
   margin: 0;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: color;
   transition-property: color;
 }
 
@@ -1391,7 +1423,9 @@ hr {
 #header .logo svg {
   fill: #FF4847;
   height: 24px;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: fill;
   transition-property: fill;
 }
 
@@ -1432,7 +1466,9 @@ hr {
     right: 0;
     text-align: left;
     top: 0;
-    transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: opacity, visibility;
     transition-property: opacity, visibility;
     visibility: hidden;
     z-index: 999;
@@ -1485,7 +1521,9 @@ hr {
     font-size: 2.6rem;
     margin-bottom: 24px;
     opacity: 0;
-    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-property: color, opacity, -webkit-transform;
     transition-property: color, opacity, -webkit-transform;
     transition-property: color, opacity, transform;
     transition-property: color, opacity, transform, -webkit-transform;
@@ -1493,34 +1531,44 @@ hr {
             transform: translateX(-24px);
   }
   #header .menu .body a:nth-child(1) {
-    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
   }
   #header .menu .body a:nth-child(2) {
-    transition-delay: 0.15s;
+    -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
   }
   #header .menu .body a:nth-child(3) {
-    transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
   }
   #header .menu .body a:nth-child(4) {
-    transition-delay: 0.25s;
+    -webkit-transition-delay: 0.25s;
+            transition-delay: 0.25s;
   }
   #header .menu .body a:nth-child(5) {
-    transition-delay: 0.3s;
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
   }
   #header .menu .body a:nth-child(6) {
-    transition-delay: 0.35s;
+    -webkit-transition-delay: 0.35s;
+            transition-delay: 0.35s;
   }
   #header .menu .body a:nth-child(7) {
-    transition-delay: 0.4s;
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
   }
   #header .menu .body a:nth-child(8) {
-    transition-delay: 0.45s;
+    -webkit-transition-delay: 0.45s;
+            transition-delay: 0.45s;
   }
   #header .menu .body a:nth-child(9) {
-    transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
   }
   #header .menu .body a:nth-child(10) {
-    transition-delay: 0.55s;
+    -webkit-transition-delay: 0.55s;
+            transition-delay: 0.55s;
   }
   #header .menu .body a:hover {
     color: #000;
@@ -1602,7 +1650,9 @@ hr {
 #footer .left svg {
   fill: #000;
   height: 24px;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: fill;
   transition-property: fill;
 }
 
@@ -1648,8 +1698,10 @@ input[type=checkbox] + span:before {
   margin-left: -36px;
   margin-right: 12px;
   margin-top: -2px;
+  -webkit-transition-property: background, border;
   transition-property: background, border;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   width: 24px;
 }
 
@@ -1681,11 +1733,14 @@ textarea,
   border: 0;
   border-bottom: 1px solid #e6e6e6;
   border-radius: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: block;
   padding: 5px 0 4px;
+  -webkit-transition-property: border;
   transition-property: border;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 input[type=email]:hover, input[type=email]:active, input[type=email]:focus,
@@ -1869,8 +1924,10 @@ textarea[readonly]:hover,
   font-size: 16px;
   font-size: 1.6rem;
   font-weight: 400;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   position: relative;
+  -webkit-transition-property: color, font-size, top;
   transition-property: color, font-size, top;
 }
 
@@ -1937,6 +1994,14 @@ textarea[readonly]:hover,
 .field.floating select::-webkit-input-placeholder,
 .field.floating textarea ::-webkit-input-placeholder,
 .field.floating textarea::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.field.floating input ::-moz-placeholder, .field.floating input::-moz-placeholder,
+.field.floating select ::-moz-placeholder,
+.field.floating select::-moz-placeholder,
+.field.floating textarea ::-moz-placeholder,
+.field.floating textarea::-moz-placeholder {
   color: transparent;
 }
 
@@ -2057,7 +2122,9 @@ textarea[readonly]:hover,
     fill: #000;
     float: left;
     margin: -12px 6px -12px 0;
-    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-property: fill;
     transition-property: fill;
     width: 72px;
   }
@@ -2067,7 +2134,9 @@ textarea[readonly]:hover,
   }
   body.page-front #clients ul li a .content h3 {
     margin: 0;
-    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-property: color;
     transition-property: color;
   }
   body.page-front #clients ul li a .content .meta {
@@ -2098,7 +2167,8 @@ textarea[readonly]:hover,
     display: block;
   }
   body.page-front #clients ul > * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     clear: none;
     float: left;
     margin: 0;
@@ -2119,14 +2189,17 @@ textarea[readonly]:hover,
     margin: 24px;
     max-width: 144px;
     opacity: 1;
-    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-property: fill, opacity, visibility, -webkit-transform;
     transition-property: fill, opacity, visibility, -webkit-transform;
     transition-property: fill, opacity, transform, visibility;
     transition-property: fill, opacity, transform, visibility, -webkit-transform;
     visibility: visibile;
   }
   body.page-front #clients ul li a .content {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     display: block;
     left: 50%;
     opacity: 0;
@@ -2135,7 +2208,9 @@ textarea[readonly]:hover,
     top: 50%;
     -webkit-transform: translate(-50%, -50%) scale(0.5);
             transform: translate(-50%, -50%) scale(0.5);
-    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-property: opacity, visibility, -webkit-transform;
     transition-property: opacity, visibility, -webkit-transform;
     transition-property: opacity, transform, visibility;
     transition-property: opacity, transform, visibility, -webkit-transform;
@@ -2200,7 +2275,8 @@ body.page-contact .grid-2 li .content h3 {
 body.type-posts #content .body .left .card {
   border: 1px solid #e6e6e6;
   border-width: 1px 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 12px;
   padding: 18px 0;
 }
@@ -2265,7 +2341,8 @@ body.page-about .card {
 body.type-work #content .body .left .card {
   border: 1px solid #e6e6e6;
   border-width: 1px 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 12px;
   padding: 18px 0;
 }
@@ -2366,7 +2443,8 @@ body.page-events #past .grid-3.padded > * {
 }
 
 .full-width {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
 }
 
@@ -2763,7 +2841,9 @@ body.with-overlay {
   top: 0;
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  -webkit-transition-property: opacity, visibility, -webkit-transform;
   transition-property: opacity, visibility, -webkit-transform;
   transition-property: opacity, transform, visibility;
   transition-property: opacity, transform, visibility, -webkit-transform;
@@ -2808,7 +2888,9 @@ body.with-overlay {
 
 .overlay .close svg {
   fill: #999999;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: fill;
   transition-property: fill;
 }
 
@@ -2826,6 +2908,7 @@ body.with-overlay {
 }
 
 .overlay.red {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff4847), color-stop(rgba(255, 72, 71, 0.96)), to(rgba(255, 72, 71, 0.86)));
   background: linear-gradient(#ff4847, rgba(255, 72, 71, 0.96), rgba(255, 72, 71, 0.86));
   color: #FFF;
 }
