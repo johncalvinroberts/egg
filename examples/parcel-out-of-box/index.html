@@ -7,12 +7,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="left">Hey</div>
-        <div class="right"><h1>Hey!</h1></div>
+    <header id="header">
+      <a href="https://wiredcraft.com/" class="logo"> logo </a>
+
+      <button class="icon toggle mobile-only">
+        <span>Menu</span>
+        <svg viewBox="0 0 24 24">
+          <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+        </svg>
+      </button>
+
+      <nav class="menu">
+        <header class="header mobile-only">
+          <a href="https://wiredcraft.com/" class="logo"> logo </a>
+          <button class="icon close">
+            <span>Close</span>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              ></path>
+            </svg>
+          </button>
+        </header>
+        <div class="body">
+          <a href="#">Trees</a>
+          <!---->
+          <a href="#">Plastics</a>
+          <!---->
+          <a href="#">About</a>
+          <!---->
+          <a href="#">Ghost stories</a>
+          <!---->
+          <a href="#">Music</a>
+          <!---->
+          <a href="#">Blog</a>
+          <!---->
+        </div>
+      </nav>
+    </header>
+    <div class="container big-padding-bottom">
+      <div
+        class="cover two-by-one"
+        style="background-image: url('images/cool-bg.png');"
+      ></div>
+      <div class="container big-padding-left border-bottom huge-margin-top">
+        <div class="row">
+          <div class="left sticky narrow">
+            <div class="card">
+              <div
+                class="avatar cover"
+                style="background-image: url('images/juha.jpg');"
+              ></div>
+              <div class="content">
+                <strong>His Name Is Juha</strong> <br />
+                He is an engineer
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <h1>Hey!</h1>
+            <p class="body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Consequuntur sed reiciendis cupiditate qui aut commodi blanditiis,
+              fuga minus exercitationem omnis officia. Illum dicta deserunt
+              perspiciatis? Nisi accusamus adipisci mollitia repellendus.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+    <nav id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="left"><h2>Ways to say okay</h2></div>
+          <div class="right">
+            <ul class="grid padded">
+              <li>
+                <h4>Friendly</h4>
+                kk
+              </li>
+              <li>
+                <h4>Familiar</h4>
+                okay
+              </li>
+              <li>
+                <h4>Neutral</h4>
+                ok
+              </li>
+              <li>
+                <h4>Complete jerk</h4>
+                k.
+              </li>
+              <li>
+                <h4>Aggressive</h4>
+                ok.
+              </li>
+              <li>
+                <h4>Murderous</h4>
+                ok.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
     <script src="index.js"></script>
   </body>
 </html>
