@@ -23,7 +23,7 @@ input[type=checkbox] {
     padding-left: 1.5*$space;
     padding-top: $space/12;
     &:before {
-      background-image: url(./icons/icon-checked.svg);
+      background-image: url('data:image/svg+xml;utf8,<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Button/toggle/checked" transform="translate(-13.000000, -13.000000)"><g id="Buttons/checked"><rect id="Bounds" fill="#FF0000" opacity="0" x="0" y="0" width="50" height="50"></rect><g id="Group-2" transform="translate(9.000000, 9.000000)"><g id="icon/done_light" transform="translate(5.000000, 4.000000)"><rect id="Bounds" fill="#FF0000" opacity="0" x="0" y="0" width="24" height="24"></rect><polyline id="Path-7" stroke="#FFFFFF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" points="19.8744825 6.48266282 8.21860862 18.5698506 3.73398137 13.6064474"></polyline></g></g></g></g></g></svg>');
       background-position: center center;
       background-repeat: no-repeat;
       border: 1px solid $black;
@@ -128,7 +128,7 @@ textarea,
     line-height: 160%;
   }
   .message {
-    background: url(./icons/icon-cross-red.svg) no-repeat left center;
+    // background: url(./icons/icon-cross-red.svg) no-repeat left center;
     padding-left: $space + $space/8;
   }
   &.error {
@@ -139,7 +139,7 @@ textarea,
       border-color: $primary;
     }
     .message {
-      background-image: url(./icons/icon-cross-red.svg);
+      // background-image: url(./icons/icon-cross-red.svg);
     }
   }
   &.ok {
@@ -152,7 +152,7 @@ textarea,
       border-color: $green;
     }
     .message {
-      background-image: url(./icons/icon-checked-green.svg);
+      // background-image: url(./icons/icon-checked-green.svg);
     }
   }
   // Floating labels

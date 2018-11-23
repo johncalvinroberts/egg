@@ -7,3 +7,5 @@ docs/_site
 bower_components
 node_modules
 !.browserslistrc
+examples/*/node_modules
+examples/*/dist
