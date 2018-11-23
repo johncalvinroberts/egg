@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="container big-padding-left border-bottom huge-margin-top">
+  <div class="row">
+    <div class="left"></div>
+    <div class="right"><h1>Welcome this is a longer one</h1></div>
+  </div>
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+  <h2>{{ page.list_title | default: 'Posts' }}</h2>
+  <ul class="big-padding-bottom">
+    {%- for post in site.posts -%}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y"
+      -%} <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+</div>
