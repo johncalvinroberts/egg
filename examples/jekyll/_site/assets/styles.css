@@ -1243,7 +1243,7 @@ input[type=checkbox] {
     padding-left: 36px;
     padding-top: 2px; }
     input[type=checkbox] + span:before {
-      background-image: url(./icons/icon-checked.svg);
+      background-image: url('data:image/svg+xml;utf8,<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Button/toggle/checked" transform="translate(-13.000000, -13.000000)"><g id="Buttons/checked"><rect id="Bounds" fill="#FF0000" opacity="0" x="0" y="0" width="50" height="50"></rect><g id="Group-2" transform="translate(9.000000, 9.000000)"><g id="icon/done_light" transform="translate(5.000000, 4.000000)"><rect id="Bounds" fill="#FF0000" opacity="0" x="0" y="0" width="24" height="24"></rect><polyline id="Path-7" stroke="#FFFFFF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" points="19.8744825 6.48266282 8.21860862 18.5698506 3.73398137 13.6064474"></polyline></g></g></g></g></g></svg>');
       background-position: center center;
       background-repeat: no-repeat;
       border: 1px solid #000;
@@ -1478,23 +1478,18 @@ textarea,
     font-size: 1.4rem;
     line-height: 160%; }
   .field .message {
-    background: url(./icons/icon-cross-red.svg) no-repeat left center;
     padding-left: 27px; }
   .field.error input,
   .field.error input:hover,
   .field.error input:active,
   .field.error input:focus {
     border-color: #FF4847; }
-  .field.error .message {
-    background-image: url(./icons/icon-cross-red.svg); }
   .field.ok input {
     border-color: #999999; }
   .field.ok input:hover,
   .field.ok input:active,
   .field.ok input:focus {
     border-color: #66CC33; }
-  .field.ok .message {
-    background-image: url(./icons/icon-checked-green.svg); }
   .field.floating {
     padding-top: 25px; }
     .field.floating label {
@@ -1558,225 +1553,6 @@ textarea,
     right: 0;
     top: 50%;
     transform: translateY(-50%); }
-
-/**
- * Front page
- */
-@media (max-width: 960px) {
-  body.page-front #clients ul {
-    border-bottom: 1px solid #e6e6e6;
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    body.page-front #clients ul li {
-      border-top: 1px solid #e6e6e6;
-      margin: 0;
-      padding: 24px 0; }
-      body.page-front #clients ul li:nth-of-type(1n+5) {
-        display: none; }
-      body.page-front #clients ul li a {
-        color: inherit; }
-        body.page-front #clients ul li a svg {
-          fill: #000;
-          float: left;
-          margin: -12px 6px -12px 0;
-          transition-duration: 0.2s;
-          transition-property: fill;
-          width: 72px; }
-        body.page-front #clients ul li a .content {
-          color: inherit;
-          margin-left: 78px; }
-          body.page-front #clients ul li a .content h3 {
-            margin: 0;
-            transition-duration: 0.2s;
-            transition-property: color; }
-          body.page-front #clients ul li a .content .meta {
-            color: #999999; }
-        body.page-front #clients ul li a:hover svg {
-          fill: red; }
-        body.page-front #clients ul li a:hover .content h3 {
-          color: #FF4847; } }
-@media (min-width: 961px) {
-  body.page-front #clients {
-    border: 1px solid #e6e6e6;
-    border-width: 1px 0;
-    text-align: center; }
-    body.page-front #clients ul {
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-      body.page-front #clients ul::after {
-        clear: both;
-        content: '';
-        display: block; }
-      body.page-front #clients ul > * {
-        box-sizing: border-box;
-        clear: none;
-        float: left;
-        margin: 0;
-        padding: 0;
-        width: 25%; }
-        body.page-front #clients ul > *:nth-child(4n + 1) {
-          clear: left; }
-      body.page-front #clients ul li {
-        position: relative; }
-        body.page-front #clients ul li a {
-          display: block; }
-          body.page-front #clients ul li a svg {
-            fill: #000;
-            margin: 24px;
-            max-width: 144px;
-            opacity: 1;
-            transition-duration: 0.2s;
-            transition-property: fill, opacity, transform, visibility;
-            visibility: visibile; }
-          body.page-front #clients ul li a .content {
-            box-sizing: border-box;
-            display: block;
-            left: 50%;
-            opacity: 0;
-            padding: 24px;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%) scale(0.5);
-            transition-duration: 0.2s;
-            transition-property: opacity, transform, visibility;
-            visibility: hidden;
-            width: 100%; }
-            body.page-front #clients ul li a .content h3 {
-              margin: 0; }
-            body.page-front #clients ul li a .content .meta {
-              color: #999999; }
-          body.page-front #clients ul li a:hover:not([href]) {
-            cursor: auto; }
-          body.page-front #clients ul li a:hover svg {
-            opacity: 0;
-            transform: scale(0.5);
-            visibility: hidden; }
-          body.page-front #clients ul li a:hover .content {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
-            visibility: visible; } }
-
-/**
- * Contact page
- */
-body.page-contact .grid-2 li::after {
-  clear: both;
-  content: '';
-  display: block; }
-body.page-contact .grid-2 li img {
-  float: left;
-  height: 72px; }
-body.page-contact .grid-2 li .content {
-  margin-left: 84px; }
-  body.page-contact .grid-2 li .content h3 {
-    font-size: inherit;
-    margin: 0; }
-
-/**
- * Blog post page
- */
-@media (max-width: 1024px) {
-  body.type-posts #content .body .left {
-    margin-top: 48px; } }
-body.type-posts #content .body .left .card {
-  border: 1px solid #e6e6e6;
-  border-width: 1px 0;
-  box-sizing: border-box;
-  margin-bottom: 12px;
-  padding: 18px 0; }
-  body.type-posts #content .body .left .card::after {
-    clear: both;
-    content: '';
-    display: block; }
-body.type-posts #content .body .left .social {
-  margin-top: 36px; }
-  body.type-posts #content .body .left .social .button {
-    float: left; }
-    body.type-posts #content .body .left .social .button:first-child {
-      margin-right: 12px; }
-body.type-posts #content .body .testimony {
-  margin: 48px 24px; }
-  body.type-posts #content .body .testimony .avatar {
-    float: left;
-    height: 96px; }
-  body.type-posts #content .body .testimony .content {
-    margin-left: 108px; }
-  body.type-posts #content .body .testimony blockquote {
-    border: 0;
-    font-size: 22px;
-    font-size: 2.2rem;
-    font-style: italic;
-    line-height: 160%;
-    margin: 0;
-    margin-bottom: 24px;
-    padding: 0; }
-
-/**
- * About page
- */
-body.page-about #staff .grid {
-  border-top: 1px solid #e6e6e6; }
-body.page-about .card {
-  border-bottom: 1px solid #e6e6e6;
-  padding: 18px 0; }
-
-/**
- * Case study page
- */
-body.type-work #content .body .left .card {
-  border: 1px solid #e6e6e6;
-  border-width: 1px 0;
-  box-sizing: border-box;
-  margin-bottom: 12px;
-  padding: 18px 0; }
-  body.type-work #content .body .left .card::after {
-    clear: both;
-    content: '';
-    display: block; }
-
-/**
- * Event page
- */
-body.page-events #content .h-event abbr,
-body.page-events #content .h-event time {
-  font-weight: 500;
-  text-decoration: none; }
-body.page-events #content .about {
-  padding: 36px 96px; }
-  @media (max-width: 960px) {
-    body.page-events #content .about {
-      padding: 24px 0; } }
-  @media (min-width: 961px) and (max-width: 1024px) {
-    body.page-events #content .about {
-      padding: 0 36px; } }
-body.page-events #content .cover.three-by-one {
-  height: 0; }
-  @media (max-width: 960px) {
-    body.page-events #content .cover.three-by-one {
-      padding-bottom: 80%; } }
-  @media (min-width: 961px) {
-    body.page-events #content .cover.three-by-one {
-      padding-bottom: 32%; } }
-body.page-events #content li {
-  margin: 60px auto; }
-  @media (max-width: 960px) {
-    body.page-events #content li {
-      margin: 24px auto; } }
-body.page-events #content ul.events {
-  margin: 24px auto; }
-body.page-events #current,
-body.page-events #past {
-  margin: 36px auto; }
-body.page-events #past .grid-3.padded {
-  margin: -24px; }
-  body.page-events #past .grid-3.padded > * {
-    padding: 24px;
-    margin: 24px auto; }
-    @media (max-width: 960px) {
-      body.page-events #past .grid-3.padded > * {
-        margin: 12px auto; } }
 
 .thin {
   font-weight: 200; }
@@ -2143,7 +1919,7 @@ body.with-overlay {
         border-color: white; }
     .overlay.red input[type=checkbox]:checked + span:before {
       background-color: transparent;
-      background-image: url(./icons/icon-checked.svg); }
+      background-image: url('data:image/svg+xml;utf8,<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Button/toggle/checked" transform="translate(-13.000000, -13.000000)"><g id="Buttons/checked"><rect id="Bounds" fill="#FF0000" opacity="0" x="0" y="0" width="50" height="50"></rect><g id="Group-2" transform="translate(9.000000, 9.000000)"><g id="icon/done_light" transform="translate(5.000000, 4.000000)"><rect id="Bounds" fill="#FF0000" opacity="0" x="0" y="0" width="24" height="24"></rect><polyline id="Path-7" stroke="#FFFFFF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" points="19.8744825 6.48266282 8.21860862 18.5698506 3.73398137 13.6064474"></polyline></g></g></g></g></g></svg>'); }
     .overlay.red input[type=checkbox] + span:before {
       background-image: none;
       border-color: rgba(255, 255, 255, 0.6); }
